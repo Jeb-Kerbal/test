@@ -2,6 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <title>lalala</title>
+    <script>
+    function changeFrameHeight(){
+        var ifm= document.getElementById("mainiframe");
+        ifm.height=document.documentElement.clientHeight-56;
+    }
+    window.onresize=function(){ changeFrameHeight();}
+    $(function(){changeFrameHeight();});
+</script>
 </head>
 <body>
     <h3>这二维码只是占位用的，啥都没有。</h3>
@@ -9,5 +17,4 @@
     <h3>不过很高兴你能够看到这些文本，能够找到这里的绝对是人群中的少数！就把这个页面当作彩蛋就好了，下面有个十分好玩的小游戏。手机电脑都可以玩，不过我觉得用电脑会更好一些。</h3>
     <hr>
     <h3>PS:二维码能存的东西太少了，而且会随体积增大会边得模糊。所以我设置成扫描后直接跳转至这个页面，好让我说更多话....因为见到你实属不易....</h3>
-    <iframe scrolling="no" name="aa" frameborder="0" src="bb.html" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>700?fdh:700)" src="https://static.hfi.me/mikutap/"></iframe>
-<body>
+    <iframe id="mainiframe" width="100%" height="600" frameborder="0" scrolling="auto" src="https://static.hfi.me/mikutap/"></iframe>
